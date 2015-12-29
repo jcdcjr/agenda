@@ -29,5 +29,6 @@ namespace Agenda.UI.Mvc.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
