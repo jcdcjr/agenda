@@ -22,7 +22,7 @@ namespace Agenda.Aplicacao.ViewModels
         [Required(ErrorMessage = "Preencha o campo Telefone.")]
         [MaxLength(16, ErrorMessage = "Máximo {0} caracteres.")]
         [MinLength(5, ErrorMessage = "Mínimo {0} caracteres.")]
-        [DisplayName("Número")]
+        [DisplayName("Número *")]
         public string Fone { get; set; }
 
         [MaxLength(4, ErrorMessage = "Máximo {0} caracteres.")]

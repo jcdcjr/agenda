@@ -1,0 +1,81 @@
+﻿@model Agenda.Aplicacao.ViewModels.EmailViewModel
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h2 class="panel-title">E-Mails</h2>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn-sm pull-right">Novo</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Tipo de E-Mail</th>
+                        <th>E-Mail</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="pull-right">
+                            <button class="btn btn-primary btn-sm">Editar</button>
+                            <button class="btn btn-primary btn-sm">Excluir</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Novo E-Mail</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                @Html.LabelFor(model => model.TipoEmail, htmlAttributes: new { @class = "control-label" })
+                            </div>
+                            
+                            <div class="col-md-2">
+                                @Html.EnumDropDownListFor(model => model.TipoEmail, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.TipoEmail, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                @Html.LabelFor(model => model.Mail, htmlAttributes: new { @class = "control-label" })    
+                            </div>
+                            
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Mail, new {htmlAttributes = new {@class = "form-control"}})
+                                @Html.ValidationMessageFor(model => model.Mail, "", new {@class = "text-danger"})
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-sm">Cancelar</button>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-sm pull-right">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

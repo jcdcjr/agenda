@@ -30,5 +30,13 @@ namespace Agenda.UI.Mvc.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<Agenda.Aplicacao.ViewModels.ContatoViewModel> ContatoViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<Agenda.Aplicacao.ViewModels.EnderecoViewModel> EnderecoViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<Agenda.Aplicacao.ViewModels.TelefoneViewModel> TelefoneViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<Agenda.Aplicacao.ViewModels.EmailViewModel> EmailViewModels { get; set; }
+
     }
 }
