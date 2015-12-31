@@ -29,15 +29,6 @@ namespace Agenda.Infra.Dados.EntityConfig
             Property(c => c.Sexo)
                 .IsRequired();
 
-            HasMany(c => c.Enderecos)
-                .WithMany()
-                .Map(ce =>
-                {
-                    ce.MapLeftKey("ContatoId");
-                    ce.MapRightKey("EnderecoId");
-                    ce.ToTable("ContatoEndereco");
-                });
-
             ToTable("Contatos");
         }
     }

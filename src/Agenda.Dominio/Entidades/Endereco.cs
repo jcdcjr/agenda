@@ -17,5 +17,9 @@ namespace Agenda.Dominio.Entidades
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+
+        public Guid ContatoId { get; set; }
+
+        public virtual Contato Contato { get; set; }
     }
 }

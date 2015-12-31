@@ -40,6 +40,10 @@ namespace Agenda.Infra.Dados.EntityConfig
                 .HasMaxLength(2)
                 .IsRequired();
 
+            HasRequired(e => e.Contato)
+                .WithMany(c => c.Enderecos)
+                .HasForeignKey(e => e.ContatoId);
+
             ToTable("Enderecos");
 
         }
